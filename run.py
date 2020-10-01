@@ -302,7 +302,7 @@ else:
         else:
             print("Accounts not found!")
             sys.exit(0)
-        new_pin = input('Enter new pin: ')
+        new_pin = input('Masukkan pin baru : ')
         config[int(accounts_enter)-1][key]["pin"] = new_pin
         print("Success change pin!")
         backupConfig()
@@ -330,13 +330,13 @@ else:
         if int(accounts_enter) < len(config)+1:
             del config[int(accounts_enter)-1]
             backupConfig()
-            print("Success delete accounts!")
+            print("Berhasil menghapus accounts!")
             restart()
         else:
-            print("Accounts not found!")
+            print("Accounts tidak dapat ditemukan!")
             sys.exit(0)
     elif menu_log == "0":
-        print("Thank you for use tool ^_^")
+        print("Terima kasih telah memakai tools ini ^_^")
         sys.exit(0)
     else:
         print("Index out of range!")
